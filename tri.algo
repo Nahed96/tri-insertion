@@ -1,0 +1,20 @@
+ALGORITHM tri
+VAR
+    
+BEGIN
+    
+    PROCEDURE tri_insertion(VAR arr :ARRAY_OF INTEGER)
+    VAR
+        i,j ,element := INTEGER;
+    BEGIN
+        FOR i FROM  TO arr.length-1 STEP 1  DO
+            element:=arr[i];
+            j=i-1;
+            WHILE (j>= 0 and arr[j]>element) DO
+                arr[j+1]:=arr[j];
+            END_WHILE
+            arr[j+1]= element;
+        END_FOR
+    END
+
+END
